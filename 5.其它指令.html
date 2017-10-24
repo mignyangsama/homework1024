@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!-- v-pre 不进行编译-->
+    <p v-pre>{{message}}</p>
+    <!-- v-once 只编译一次-->
+    <p v-once>{{message}}</p>
+    <!--v-cloak 结合文本插值使用-->
+    <p v-cloak >{{message}}</p>
+</div>
+</body>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            message:'Hello,Vue.js'
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<!-- v-for for循环-->
+<div id="app">
+    <h1 v-for="value in student">{{value}}</h1>
+</div>
+</body>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            student:{
+                name:'张三',
+                age:18,
+                sex:'女'
+            }
+        }
+    })
+</script>
+</html>

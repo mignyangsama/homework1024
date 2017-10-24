@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+<!-- v-if if判断 -->
+<!-- v-else else判断 -->
+<!-- v-else-if else-if判断 -->
+<!-- v-show 切换标签display -->
+    <p v-if="type === 'A'">A</p>
+    <p v-else-if="type ==='B'">B</p>
+    <P v-else>AB</P>
+    <p v-show="true">我显示</p>
+    <p v-show="false">我不显示</p>
+
+</div>
+</body>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            type:'A'
+        }
+    })
+</script>
+</html>
